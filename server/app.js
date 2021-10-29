@@ -1,8 +1,9 @@
 const path = require('path');
 const express = require('express');
 const compression = require('compression');
-const favicon = require('favicon');
+const favicon = require('serve-favicon');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const expressHandlebars = require('express-handlebars');
 

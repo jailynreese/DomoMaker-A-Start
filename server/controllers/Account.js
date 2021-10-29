@@ -52,7 +52,7 @@ const signup = (request, response) => {
   }
 
   return Account.AccountModel.generateHash(req.body.pass, (salt, hash) => {
-    const AccountData = {
+    const accountData = {
       username: req.body.username,
       salt,
       password: hash,

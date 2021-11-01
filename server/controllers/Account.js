@@ -1,6 +1,6 @@
 const models = require('../models');
 
-const { Account } = models;
+const Account = models.Account;
 
 const loginPage = (req, res) => {
   res.render('login');
@@ -48,7 +48,7 @@ const signup = (request, response) => {
   }
 
   if (req.body.pass !== req.body.pass2) {
-    return res.status(400).json({ error: 'RAWR! Passwords do no match' });
+    return res.status(400).json({ error: 'RAWR! Passwords do not match' });
   }
 
   return Account.AccountModel.generateHash(req.body.pass, (salt, hash) => {
